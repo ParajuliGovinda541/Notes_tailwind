@@ -1,0 +1,33 @@
+      <!-- ads popup started -->
+       <div id="popupAds" class="fixed bg-blue-600 bg-opacity-50 bottom-0 right-0 left-0 backdrop-blur-md top-0 flex items-center z-20     ">
+                <div class="lg:w-4/12 md:11/12 w-9/12 mx-auto relative ">
+                    <i class="ri-close-fill absolute text-2xl bg-white rounded-full px-1 -right-4 -top-4 cursor-pointer" id="closeBtn"></i>
+                    <img src="hv.png" alt="">
+                </div>
+                <i class="ri-close-fill absolute rounded-full right-10 top-10 text-4xl text-white "></i>
+            </div>
+
+
+-----------script-----------------------
+
+    <script>
+        var topbtn = document.getElementById('topbtn');
+        topbtn.style.display = 'none';
+
+        window.onscroll = function() {
+            scrollFunction();
+        }
+
+        function scrollFunction() {
+            if (window.pageYOffset > 200) {
+                topbtn.style.display = 'block';
+
+            } else {
+                topbtn.style.display = 'none';
+            }
+        }
+
+        topbtn.addEventListener('click', function() {
+            window.scroll(0, 0);
+        });
+    </script>
